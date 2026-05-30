@@ -1,0 +1,71 @@
+:root {
+    --bg-page: #e0e0e0;
+    --btn-blue: #2c4a5c;
+    --btn-red: #e62e2e;
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f9f9f9; 
+    background-image: url('https://284baef4-3d14-4ca5-8247-4811f0d6b14b.selstorage.ru/eb7d80db-21ca-4161-8a7b-b39dac17caea_fon.png');
+    margin: 0;
+    padding: 0;
+}
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; border-bottom: 1px solid #ddd; }
+.header-logo { font-weight: 900; font-size: 1.6rem; text-decoration: none; color: #000; }
+.nav-links { display: flex; gap: 25px; align-items: center; }
+.nav-links a { text-decoration: none; color: #333; font-size: 0.8rem; font-weight: 700; }
+.btn-login { background: #000; color: #fff !important; padding: 10px 25px; border-radius: 25px; }
+
+.decorative-line { color: #000000; overflow: hidden; white-space: nowrap; padding: 5px 0; }
+
+main { padding: 40px 5%; max-width: 1300px; margin: 0 auto; }
+h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 30px; }
+
+.controls { display: flex; gap: 15px; margin-bottom: 30px; }
+.filter-select { padding: 10px 20px; border-radius: 20px; border: 1px solid #ccc; background: white; font-weight: 600; cursor: pointer; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
+.card { background: white; padding: 20px; border-radius: 25px; text-align: center; border: 1px solid #ececec; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.artist-img { width: 100%; aspect-ratio: 1/1; border-radius: 20px; object-fit: cover; margin-bottom: 15px; }
+.name { font-weight: 900; font-size: 1.2rem; margin-bottom: 5px; }
+.meta { color: #666; font-size: 0.85rem; margin-bottom: 2px; }
+
+.btn-blue { background: var(--btn-blue); color: #fff !important; text-decoration: none; display: block; border: none; padding: 12px 0; border-radius: 25px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 15px; }
+.btn-buy { display: inline-block; background: transparent; color: #606060; border: none; font-weight: 800; cursor: pointer; margin: 10px 0; text-transform: uppercase; font-size: 0.8rem; text-decoration: none; }
+
+/* Стили для блока "ВЫ РАНЕЕ СМОТРЕЛИ" */
+.history-bg {padding: 60px 5%; color: #fff; margin-top: 50px; background: #000; }
+.history-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 30px; }
+.history-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.hist-card { background: #fff; padding: 15px; border-radius: 25px; }
+.hist-img { width: 100%; aspect-ratio: 1/1; border-radius: 20px; object-fit: cover; }
+.btn-red { background: var(--btn-red); color: white; border: none; padding: 12px 0; border-radius: 20px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 15px; }
+
+/* Оформление футера */
+footer { 
+    background: #ffffff; 
+    padding: 80px 5%; 
+    border-top: 1px solid #e5e5e5; 
+    color: #000;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo { font-size: 1.8rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+.footer-text { color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; max-width: 300px; }
+.footer-title { font-weight: 900; margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; }
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a { text-decoration: none; color: #666; font-size: 0.85rem; font-weight: 500; }
+.footer-links a:hover { color: #000; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icon { width: 35px; height: 35px; background: #000; border-radius: 50%; }

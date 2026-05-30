@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SONDER | Вход и Регистрация</title>
+    <link rel="stylesheet" href="css/style5.css">
+  </head>
+  <body>
+    
+    <!-- Форма входа -->
+    <div id="login-card" class="container">
+      <div class="header"><h1>SONDER</h1></div>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Email или логин</label>
+          <input type="text" id="login-id" required />
+        </div>
+        <div class="form-group">
+          <label>Пароль</label>
+          <input type="password" id="login-pass" required />
+        </div>
+        <button type="submit" class="btn">Войти</button>
+      </form>
+      <div class="footer-links">
+        Нет аккаунта? <a onclick="toggleForm('register')">Зарегистрироваться</a>
+      </div>
+    </div>
+
+    <!-- Форма регистрации -->
+    <div id="register-card" class="container hidden">
+      <div class="header"><h1>SONDER</h1></div>
+      <form id="register-form">
+        <div class="form-group">
+          <label>Имя пользователя</label>
+          <input type="text" id="reg-user" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="reg-email" required />
+        </div>
+        <div class="form-group">
+          <label>Пароль</label>
+          <input type="password" id="reg-pass" required />
+        </div>
+        <button type="submit" class="btn">Создать аккаунт</button>
+      </form>
+      <div class="footer-links">
+        Уже есть аккаунт? <a onclick="toggleForm('login')">Войти</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleForm(formType) {
+          document.getElementById('login-card').classList.toggle('hidden');
+          document.getElementById('register-card').classList.toggle('hidden');
+      }
+
+      document.getElementById('login-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          window.location.href = 'аккаунт.html';
+      });
+
+      document.getElementById('register-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          window.location.href = 'аккаунт.html';
+      });
+    </script>
+  </body>
+</html>

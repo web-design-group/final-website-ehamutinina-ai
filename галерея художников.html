@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style4.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonder - Галерея художников</title>
+</head>
+  <body>
+<header>
+    <a class="header-logo" href="index.html">SONDER</a>
+    <div class="nav-links">
+        <a href="index.html#support">ПОДДЕРЖКА</a><a href="#">ГАЛЕРЕЯ</a><a href="#">ХУДОЖНИКИ</a>
+        <a href="index.html#store">МАГАЗИН</a><a href="регистрация и вход.html">РЕГИСТРАЦИЯ</a>
+        <a href="регистрация и вход.html" class="btn-login">ВОЙТИ</a>
+    </div>
+</header>
+ <div class="decorative-line">
+      &nbsp;
+      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    </div>
+<main>
+    <h1>НАШИ ХУДОЖНИКИ</h1>
+    <div class="controls">
+        <select id="filterCity" class="filter-select" onchange="filterArtists()">
+            <option value="all">Все города</option>
+            <option value="Москва">Москва</option>
+            <option value="Санкт-Петербург">Санкт-Петербург</option>
+            <option value="Казань">Казань</option>
+            <option value="Новосибирск">Новосибирск</option>
+        </select>
+        <select id="filterCategory" class="filter-select" onchange="filterArtists()">
+            <option value="all">Все категории</option>
+            <option value="Живопись">Живопись</option>
+            <option value="Цифровое искусство">Цифровое искусство</option>
+        </select>
+    </div>
+
+   
+        <!-- JS динамически вставит сюда карточки -->
+    </div>
+    <section class="grid">
+        <script>
+            const artists = [
+                {name: "Артур Яковлев", city: "Москва", works: 120, img: "images/Rectangle 108.jpg"},
+                {name: "Максим Вахрушев", city: "Челябинск", works: 100, img: "images/Rectangle 108.png"},
+                {name: "Анна Молчанова", city: "Москва", works: 90, img: "images/Rectangle 108 (1).png"},
+                {name: "Артур Коволёв", city: "Санкт-Петербург", works: 130, img: "images/Rectangle 117.png"},
+                {name: "Мария Иванова", city: "Тула", works: 100, img: "images/Rectangle 120.png"},
+                {name: "Фёдор Попов", city: "Кострома", works: 50, img: "images/Rectangle 108 (2).png"},
+                {name: "Елена Костылева", city: "Псков", works: 60, img: "images/Rectangle 117 (1).png"},
+                {name: "Ольга Киселева", city: "Калуга", works: 120, img: "images/Rectangle 120 (1).png"},
+                {name: "Сергей Громов", city: "Москва", works: 120, img: "images/Rectangle 108 (3).png"}
+            ];
+            artists.forEach(a => {
+                document.write(`
+                    <div class="card">
+                        <img src="${a.img}" class="artist-img" alt="${a.name}">
+                        <div class="name">${a.name}</div>
+                        <div class="meta">Город: ${a.city}</div>
+                        <div class="meta">Работ в каталоге: ${a.works}</div>
+                        <div <div style="margin- : 15px;">
+                        <a href="норм корзина.html" class="btn-buy">🛒 Купить</a>
+                        </div>
+                        <div> 
+                        <a href="аккаунт.html" class="btn-blue"> Открыть автора </a>
+                        </div>
+    
+                    </div>
+                `);
+            });
+        </script>
+    </section>
+</main>
+
+<section class="history-bg">
+    <div class="max-w-7xl mx-auto">
+        <div class="history-title">ВЫ РАНЕЕ СМОТРЕЛИ</div>
+        <div class="history-grid">
+            <div class="hist-card">
+                <img src="images/Rectangle 109.png" class="hist-img" alt="Работа 1">
+                <button class="btn-red">Открыть автора</button>
+            </div>
+            <div class="hist-card">
+                <img src="images/Rectangle 110.png" class="hist-img" alt="Работа 2">
+                <button class="btn-red">Открыть автора</button>
+            </div>
+            <div class="hist-card">
+                <img src="images/Rectangle 111.png" class="hist-img" alt="Работа 3">
+                <button class="btn-red">Открыть автора</button>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<footer>
+    <div class="footer-container">
+        <div>
+            <div class="footer-logo">SONDER</div>
+            <p class="footer-text">Наша цель — создать идеальную экосистему для цифрового искусства, где технология встречается с творчеством.</p>
+        </div>
+        <div>
+            <div class="footer-title">Сообщество</div>
+            <ul class="footer-links">
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Подкаст</a></li>
+                <li><a href="#">Пригласить друга</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="footer-title">О нас</div>
+            <ul class="footer-links">
+                <li><a href="#">Как это работает</a></li>
+                <li><a href="#">Рекомендуемые</a></li>
+                <li><a href="#">Партнерство</a></li>
+                <li><a href="#">Деловые отношения</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="footer-title">Соцсети</div>
+            <ul class="footer-links">
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
